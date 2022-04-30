@@ -1,0 +1,52 @@
+<!-- Hi! It's good to see you here. -->
+<!-- 
+I would like to inform you that this site and others in my repository are non-profit, educational purposes only. But if you want, somewhere you should find a link to buy me a coffee. The MIT license has more information about this project and I recommend that you read and study it. -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 10</title>
+    <!-- this must load before site loads -->
+    <link rel="stylesheet" href="assets/css/preloader.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+</head>
+
+<body>
+
+    <!-- start preloader -->
+    <div class="containerLoader" id="loadingPage">
+        <img src="assets/img/logo.svg" id="wLoadingLogo" class="windowsLogo" alt="" srcset="">
+        <div id="loader">
+            <img src="assets/img/windowsLoading.gif" id="wLoadingLogo"  alt="" srcset="">
+        </div>
+    </div>
+    <!-- end preloader -->
+
+    <!-- <img src="assets/img/dump/default.png" alt="" class="dump"> -->
+    <!-- start login section -->
+    <main id="loginPage" class="loginWallpaper">
+        <div class="clockDetails">
+            <p class="time" id="time"></p>
+            <p class="date" id="date"></p>
+        </div>
+        <div class="sysIcons">
+            <img src="assets/img/icons/ethernet.ico" class="iconWifi loginIcons">
+            <img src="assets/img/icons/Shutdown.svg" class="iconBattery loginIcons">
+        </div>
+    </main>
+    <!-- end login section -->
+
+    <!-- this can load before site loads -->
+    <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/clock.js"></script>
+    <script src="assets/js/connection.js"></script>
+
+</body>
+
+</html>

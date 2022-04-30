@@ -1,0 +1,138 @@
+/* Center the loader */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: black;
+}
+
+.containerLoader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 5rem;
+    background-color: black !important;
+    
+}
+
+.windowsLogo {
+    display: block;
+    width: 220px;
+    height: auto;
+    margin-top: 11.6rem;
+}
+
+#loader {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10.5rem;
+    width: 56px;
+    height:56px;
+  }
+
+#loginPage {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+
+.loginWallpaper {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: url('../img/wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blur {
+  transition: all 1s;
+  filter: blur(20px)
+}
+
+.dump {
+  position: absolute;
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+  top: 0;
+  left: 0;
+}
+
+.clockDetails {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  height: 170px;
+  bottom: 5rem;
+}
+
+.time {
+  
+  bottom: 3.3rem;
+  letter-spacing: .2rem;
+  font-size: 7rem;
+  font-weight: 100;
+}
+
+.date {
+  font-size: 3.5rem;
+  letter-spacing: .05rem;
+
+  font-weight: 300;
+  top: 6rem;
+}
+.time, .date {
+  left: 1.9rem;
+  display: block;
+  position: absolute;
+  color: white;
+  font-family: 'SegoeUI';
+}
+
+.sysIcons {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  height: 50px;
+  bottom: 1rem;
+  right: 1.5rem;
+}
+
+.loginIcons {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+}
+
+.iconBattery {
+  filter: invert();
+  width: 30px;
+  height: 30px;
+}
