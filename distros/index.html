@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Distros</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="logo">live<span class="logoGradient">Distros</span></span>
+            <ul>
+                <li id="docs">docs</li>
+                <li id="about">about</li>
+                <li id="kofi">buy me a coffee</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="osCard">
+                    <div class="osLogo"></div>
+                    <div class="osName"></div>
+                    <div class="lastUpdate"></div>
+                    <div class="author"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="fullContainer hidden" id="containerAbout">
+        <div class="modal" id="modalAbout">
+            <div class="controls">
+                <div class="close" id="closeAbout"><img src="assets/img/x.svg" class="closeIcon"></div>
+            </div>
+            <hr>
+            <div class="modalContent">
+
+            </div>
+        </div>
+    </div>
+    <div class="fullContainer hidden" id="containerDocs">
+        <div class="modal" id="modalAbout">
+            <div class="controls">
+                <div class="close" id="closeDocs"><img src="assets/img/x.svg" class="closeIcon"></div>
+            </div>
+            <hr>
+            <div class="modalContent">
+                <a target="_blank" href="http://github.com/victorinknov/uiClone">
+                    <div class="modalCard">
+                        <img class="modalCardImage" src="assets/img/github.svg">
+                        <h1 class="modalCardTitle">victorinknov/uiClone</h1>
+                    </div>
+                </a>
+                <div class="hrVertical"></div>
+                <a target="_blank" href="http://youtube.com">
+                    <div class="modalCard">
+                        <img class="modalCardImage" src="assets/img/youtube.svg">
+                        <h1 class="modalCardTitle">clone.cc</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js" defer></script>
+</body>
+</html> 
