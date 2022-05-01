@@ -10,11 +10,13 @@ I would like to inform you that this site and others in my repository are non-pr
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Windows 10</title>
-    <!-- this must load before site loads -->
+    <link rel="shortcut icon" href="assets/img/logo.svg" type="image/x-icon">
+    <!-- this must load before dom content loads -->
     <link rel="stylesheet" href="assets/css/preloader.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
 <body>
@@ -31,21 +33,27 @@ I would like to inform you that this site and others in my repository are non-pr
     <!-- <img src="assets/img/dump/default.png" alt="" class="dump"> -->
     <!-- start login section -->
     <main id="loginPage" class="loginWallpaper">
-        <div class="clockDetails">
-            <p class="time" id="time"></p>
-            <p class="date" id="date"></p>
-        </div>
-        <div class="sysIcons">
-            <img src="assets/img/icons/ethernet.ico" class="iconWifi loginIcons">
-            <img src="assets/img/icons/Shutdown.svg" class="iconBattery loginIcons">
+        <div class="dropzone"></div>
+        <div class="loginPageContent drag-drop" id="loginPageContent">
+            <div class="clockDetails">
+                <p class="time" id="time"></p>
+                <p class="date" id="date"></p>
+            </div>
+            <div class="sysIcons">
+                <img src="assets/img/icons/ethernet.ico" class="iconWifi loginIcons">
+                <img src="assets/img/icons/Shutdown.svg" class="iconBattery loginIcons">
+            </div>
         </div>
     </main>
     <!-- end login section -->
 
     <!-- this can load before site loads -->
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/login.js" defer></script>
     <script src="assets/js/clock.js"></script>
     <script src="assets/js/connection.js"></script>
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
 
 </body>
 
