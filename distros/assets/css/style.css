@@ -17,7 +17,7 @@
     --asteroid: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     --margo: linear-gradient(to right, #ffefba, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     --midnightCity: linear-gradient(to right, #232526, #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    --royal: linear-gradient(to right, #141e30, #243b55); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+    --royal: linear-gradient(to right, #141e30, #243b55); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     --dull: linear-gradient(to right, #c9d6ff, #e2e2e2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     --cinnamint: linear-gradient(to right, #4ac29a, #bdfff3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     --royalBlue: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(50, 100, 240, .7), rgba(0, 0, 0, 0));
@@ -28,7 +28,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    user-select: none   ;
+    user-select: none;
 }
 
 html, body {
@@ -51,10 +51,9 @@ span.logoGradient {
 }
 
 header {
-    display: block; 
+    display: block;
     width: 100%;
     height: 65px;
-    border: 1px solid red;
 }
 
 nav {
@@ -123,9 +122,15 @@ ul li#kofi:hover {
 
 .controls {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     height: calc(1rem + 21px);
-    justify-content: right;
+}
+
+
+.controlsTitle {
+    margin-top: .5rem;
+    z-index: 9999;
 }
 
 .close {
@@ -179,6 +184,7 @@ ul li#kofi:hover {
 .modalCard:hover {
     transition: .5s all ease-in-out;
     background: linear-gradient(to top, rgba(50, 100, 240, .188), rgba(255,255,255, .1));
+    border: 1px solid rgba(255,255,255, .6);
 }
 
 .modalCardImage {
@@ -191,6 +197,10 @@ ul li#kofi:hover {
 .modalCardTitle {
     font-size: 1rem;
     margin-bottom: 3rem;
+}
+
+.blur {
+    filter: blur(1px)
 }
 
 hr {
@@ -217,4 +227,96 @@ a, a:visited, a:hover {
     width: 1px;
     border: 0;
     background: var(--royalBlue);
+}
+
+.bigLogo {
+    font-size: 3rem !important;
+}
+
+.license {
+    font-size: .8rem;
+    text-align: justify;
+    max-width: 80%;
+}
+
+.copyright {
+    font-size: .8rem;
+    text-align: center;
+    max-width: 80%;
+}
+
+.col {
+    flex-direction: column !important;
+}
+
+.fakeBtn {
+    width: 30px;
+    height: 30px;
+    background-color:rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 65px);
+}
+
+section {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoWhite {
+    filter: brightness(200);
+}
+
+.mlr1 {
+    margin: 0 1rem;
+}
+
+.noFilter {
+    filter: none;
+}
+
+.tagProduction {
+    background: var(--green);
+    padding: .125rem;
+    border-radius: .250rem;
+    padding-left: .350rem;
+    padding-right: .350rem;
+    color: rgba(0, 0, 0, .5)
+}
+
+.tagSoon {
+    background: var(--red);
+    padding: .125rem;
+    padding-left: .350rem;
+    padding-right: .350rem;
+    border-radius: .250rem;
+    color: rgba(0, 0, 0, .5)
+
+}
+
+.tooltiptext {
+    position: absolute;
+    margin-top: 13rem;
+    display: none;
+    background: var(--foreground);
+    padding: .1rem 1.5rem;
+    color: rgba(0, 0, 0, .7);
+    font-weight: 600;
+    border-radius: .25rem;
+}
+
+.tooltip:hover > .tooltiptext {
+    display: block;
 }

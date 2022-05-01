@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Live Distros</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -21,29 +23,67 @@
     <main>
         <section>
             <div class="container">
-                <div class="osCard">
-                    <div class="osLogo"></div>
-                    <div class="osName"></div>
-                    <div class="lastUpdate"></div>
-                    <div class="author"></div>
+                <a href="./windows10/index.html">
+                    <div class="modalCard mlr1 tooltip">
+                        <img class="modalCardImage logoWhite" src="assets/img/w10.svg">
+                        <h1 class="modalCardTitle tagProduction">Windows 10</h1>
+                        <p class="tooltiptext">STABLE</p>
+                    </div>
+                </a>
+                <div class="modalCard mlr1 tooltip">
+                    <img class="modalCardImage logoWhite" src="assets/img/ubuntu.svg">
+                    <h1 class="modalCardTitle tagSoon">Ubuntu 20.04</h1>
+                    <p class="tooltiptext">COMING SOON</p>
+                </div>
+                <div class="modalCard mlr1 tooltip">
+                    <img class="modalCardImage logoWhite" src="assets/img/apple.svg">
+                    <h1 class="modalCardTitle tagSoon">Mac Os Catalina</h1>
+                    <p class="tooltiptext">COMING SOON</p>
                 </div>
             </div>
         </section>
     </main>
+    <!-- modal about -->
     <div class="fullContainer hidden" id="containerAbout">
         <div class="modal" id="modalAbout">
             <div class="controls">
+                <div class="fakeBtn">.</div>
+                <div class="controlsTitle">about</div>
                 <div class="close" id="closeAbout"><img src="assets/img/x.svg" class="closeIcon"></div>
             </div>
             <hr>
-            <div class="modalContent">
-
+            <div class="modalContent col">
+                <span class="logo bigLogo">live<span class="logoGradient">Distros</span></span>
+                <p class="copyright">Copyright 2022 © LiveDistros</p>
+                <p class="license">
+                    &nbsp; Redistribution and use in source and binary forms, with or without modification, are
+                    permitted provided that the following conditions are met:
+                    <br>
+                    1. Redistributions of source code must retain the above copyright notice, this list of conditions
+                    and the following disclaimer.
+                    <br>
+                    2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions
+                    and the following disclaimer in the documentation and/or other materials provided with the
+                    distribution.
+                    <br>
+                    &nbsp; THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
+                    OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+                    FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+                    CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+                    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+                    DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+                    IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+                    THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+                </p>
             </div>
         </div>
     </div>
+    <!-- modal docs -->
     <div class="fullContainer hidden" id="containerDocs">
-        <div class="modal" id="modalAbout">
+        <div class="modal" id="modalDocs">
             <div class="controls">
+                <div class="fakeBtn"></div>
+                <div class="controlsTitle">documentation</div>
                 <div class="close" id="closeDocs"><img src="assets/img/x.svg" class="closeIcon"></div>
             </div>
             <hr>
@@ -66,4 +106,5 @@
     </div>
     <script src="assets/js/script.js" defer></script>
 </body>
-</html> 
+
+</html>
