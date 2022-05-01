@@ -1,7 +1,8 @@
 const position = { x: 0, y: 0 }
 
 let setBlurOnWallpaper = document.getElementById('loginPage'),
-    hideLoginElements = document.getElementById('loginPageContent')
+    hideLoginElements = document.getElementById('loginPageContent'),
+    loginDetailsSection = document.getElementById('loginDetails')
 
 interact('.dropzone').dropzone({
     accept: '#loginPageContent',
@@ -11,6 +12,8 @@ interact('.dropzone').dropzone({
     ondragenter: (event) => {
         setBlurOnWallpaper.classList.add('blur')
         hideLoginElements.style.display = 'none'
+        loginDetailsSection.style.animation = 'fade .5s ease-in-out';
+        loginDetailsSection.style.display = 'flex'
         console.log('element on dropzone')
     },
     ondragleave: (event) => {

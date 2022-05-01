@@ -11,7 +11,6 @@ setInterval(() => {
     
     // adding a zero when number contains only one digit 
     hour < 10 ? hour = '0' + hour : null
-    month = month + 1
     minutes < 10 ? minutes = '0' + minutes : null
 
     switch (dayOfWeek) {

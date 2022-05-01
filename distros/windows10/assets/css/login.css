@@ -74,7 +74,8 @@
     height: 25px;
     margin: 0 10px;
 }
-  
+
+
 .iconBattery {
     filter: invert();
     width: 30px;
@@ -95,4 +96,74 @@
     height: 35%;
     top: 0;
     left: 0;
+}
+
+section.loginDetails {
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.mainContent {
+    position: absolute;
+    top: 15rem;
+}
+
+.profileImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.usernameText {
+    font-family: 'SegoeUI';
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: .5rem;
+    font-weight: 300;
+}
+
+.coverBtn {
+    display: block;
+    margin: 0 auto;
+    height: 40px;
+    width: 60%;
+    border: 2px solid white;
+    cursor: pointer;
+    margin-top: .5rem;
+}
+
+.btnLogin {
+    cursor: pointer;
+    background: rgba(255,255,255, .25);
+    color: white;
+    border: 1px solid rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+}
+
+.btnLogin:hover {
+    box-shadow: inset 0px 0px 0px 2px rgba(255,255,255, .55) ;
+}
+
+.sysIconsLogin {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    height: 50px;
+    bottom: 1rem;
+    right: 1.5rem;
+}
+
+.sysIconsLogin span {
+    margin-top: .5rem;
+    margin-left: .5rem;
 }

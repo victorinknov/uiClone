@@ -303,7 +303,6 @@ section {
     padding-right: .350rem;
     border-radius: .250rem;
     color: rgba(0, 0, 0, .5)
-
 }
 
 .tooltiptext {
@@ -319,4 +318,10 @@ section {
 
 .tooltip:hover > .tooltiptext {
     display: block;
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .modalContent, .container, main, section, nav {
+        flex-direction: column;
+    }
 }
