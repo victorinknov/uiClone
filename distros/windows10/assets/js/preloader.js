@@ -7,4 +7,4 @@ setTimeout(()=>{
     // transition.addEventListener('click', ()=>{
     //     transition.classList.add('blur')
     // })
-}, 7000) 
+}, 1000) 

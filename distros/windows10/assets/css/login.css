@@ -15,7 +15,7 @@
 
 .blur {
     transition: all 1s;
-    filter: blur(20px)
+    filter: blur(20px) url(#filter);
 }
 
 .dump {
@@ -112,6 +112,10 @@ section.loginDetails {
 
 .mainContent {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     top: 15rem;
 }
 
@@ -130,26 +134,27 @@ section.loginDetails {
 }
 
 .coverBtn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
     height: 40px;
-    width: 60%;
+    width: 100%;
     border: 2px solid white;
     cursor: pointer;
-    margin-top: .5rem;
 }
 
 .btnLogin {
     cursor: pointer;
-    background: rgba(255,255,255, .25);
+    background: rgba(170, 170, 170, 0.25);
     color: white;
     border: 1px solid rgba(0,0,0,.5);
-    width: 100%;
-    height: 100%;
+    height: 60px;
+    width: 120px;
 }
 
 .btnLogin:hover {
-    box-shadow: inset 0px 0px 0px 2px rgba(255,255,255, .55) ;
+    box-shadow: inset 0px 0px 0px 2px rgba(245, 245, 245, 0.55) ;
 }
 
 .sysIconsLogin {
@@ -166,4 +171,32 @@ section.loginDetails {
 .sysIconsLogin span {
     margin-top: .5rem;
     margin-left: .5rem;
+}
+
+.areaButton {
+    display: flex;
+    align-items: center !important;
+    justify-content: space-around !important;
+    height: 100px;
+}
+
+.logginInMessage {
+    display: none;
+    transition: all 1s ease-in-out !important;
+}
+
+.logginInLoading {
+    width: 40px;
+    height: 40px;
+}
+
+.textWelcome {
+    font-family: 'SegoeUI';
+    font-size: 1.5rem;
+}
+
+.separator {
+    visibility: hidden;
+    width: 15px;
+    height: 15px;
 }

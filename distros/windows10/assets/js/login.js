@@ -1,3 +1,5 @@
+// start draggable
+
 const position = { x: 0, y: 0 }
 
 let setBlurOnWallpaper = document.getElementById('loginPage'),
@@ -53,20 +55,6 @@ interact('.drag-drop')
     })
     .styleCursor(false)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function dragMoveListener(event) {
     var target = event.target,
         // keep the dragged position in the data-x/data-y attributes
@@ -82,3 +70,21 @@ function dragMoveListener(event) {
     target.setAttribute('data-x', x);
     target.setAttribute('data-y', y);
 }
+
+// end draggable
+
+let loginButton = document.getElementById('btnLogin'),
+    coverAreaButton = document.getElementById('coverBtn'),
+    logginInMessage = document.getElementById('logginInMessage'),
+    usernameText = document.querySelector('.usernameText')
+    
+    
+
+    loginButton.addEventListener('click', ()=>{
+        usernameText.innerText == 'liveDistro' || '' ? window.alert('Login Inválido. Insira seu login editando o nome de usuário.') : showLoginMessage()
+        function showLoginMessage() {
+            coverAreaButton.style.display = 'none'
+            logginInMessage.style.display = 'flex'
+            logginInMessage.style.animation = 'fade .5s ease-in-out';
+        }
+    })
