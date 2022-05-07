@@ -76,15 +76,18 @@ function dragMoveListener(event) {
 let loginButton = document.getElementById('btnLogin'),
     coverAreaButton = document.getElementById('coverBtn'),
     logginInMessage = document.getElementById('logginInMessage'),
-    usernameText = document.querySelector('.usernameText')
+    usernameText = document.querySelector('.usernameText'),
+    userImage = document.getElementById('userImage')
     
     
 
     loginButton.addEventListener('click', ()=>{
-        usernameText.innerText == 'liveDistro' || '' ? window.alert('Login Inválido. Insira seu login editando o nome de usuário.') : showLoginMessage()
+        usernameText.innerText == 'Guest' || '' ? window.alert('Você não pode entrar como convidado. Insira seu login editando o nome de usuário.') : showLoginMessage()
         function showLoginMessage() {
             coverAreaButton.style.display = 'none'
             logginInMessage.style.display = 'flex'
-            logginInMessage.style.animation = 'fade .5s ease-in-out';
+            userImage.src = `./assets/img/users/${usernameText.innerText}.png`
+            logginInMessage.style.animation = 'fade .75s ease-in-out';
+            userImage.style.animation = 'fade .75s ease-in-out';
         }
     })
