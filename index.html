@@ -8,6 +8,7 @@
     <title>Live Distros</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="google-site-verification" content="EeQh7ALqRJrCV8Cy3ERYQEhgxs23er1htpItnsiXq5M" />
+    <meta name="google-signin-client_id" content="565903734600-3u0ru96f1ijdbmb17h91ljn1o5cqoa1b.apps.googleusercontent.com">
 </head>
 
 <body>
@@ -120,8 +121,7 @@
                     <form action="/registration" autocomplete="off">
                         <h3> <span class="draw">#</span> become a member</h3>
                         <input type="text" name="username" id="username" placeholder="Username">
-                        <input type="email" name="email" id="email" placeholder="E-mail">
-                        <input type="text" name="password" id="password" placeholder="Password">
+                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
                         <label for="userImage">choose your best picture</label>
                         <input type="file" name="userImage" id="userImage" value="teste" placeholder="Your best picture">
                         <button type="submit">sign up</button>
@@ -130,6 +130,7 @@
             </div>
         </div>
     </div>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="assets/js/script.js" defer></script>
 </body>
 
