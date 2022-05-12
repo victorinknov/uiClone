@@ -81,7 +81,7 @@ let loginButton = document.getElementById('btnLogin'),
     
     
 
-    loginButton.addEventListener('click', ()=>{
+    loginButton.addEventListener('click', () => {
         usernameText.innerText == 'Guest' || '' ? window.alert('Você não pode entrar como convidado. Insira seu login editando o nome de usuário.') : showLoginMessage()
         function showLoginMessage() {
             coverAreaButton.style.display = 'none'

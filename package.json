@@ -1,0 +1,36 @@
+{
+  "name": "uiclone",
+  "version": "1.0.0",
+  "description": "Distro UI clones",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorinknov/uiClone.git"
+  },
+  "keywords": [
+    "Windows",
+    "Linux",
+    "Debian",
+    "Windows",
+    "10",
+    "Clone",
+    "UI",
+    "User",
+    "Interface"
+  ],
+  "author": "Victor Inknov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/victorinknov/uiClone/issues"
+  },
+  "homepage": "https://github.com/victorinknov/uiClone#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.16"
+  }
+}

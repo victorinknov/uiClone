@@ -346,3 +346,55 @@ li#register:hover {
     animation: none;
     animation-iteration-count: infinite;
 }
+
+.formArea {
+    display: flex;
+    border: 1px solid rgba(255,255,255, .3);
+    border-radius: .639rem;
+    width: 50%;
+    height: 75%;
+}
+
+.formArea form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+form button, form input[type=text], form input[type=email] {
+    background: rgba(255,255,255, .1);
+    height: 35px;
+    width: 90%;
+    border-radius: calc(.639rem / 2);
+}
+
+form button {
+    border: 1px solid rgb(80, 250, 123, .8);
+    background: rgba(80, 250, 123, .25);
+
+    color: var(--green);
+    cursor: pointer;
+}
+
+form input[type=text], form input[type=email] {
+    border: 1px solid rgba(255,255,255, .3);
+    color: var(--foreground);
+    outline: 0;
+    padding: 10px;
+}
+
+form input[type=text]::placeholder, form input[type=email]::placeholder {
+    color: var(--foreground);
+}
+
+form h3 span.draw {
+    position: absolute;
+    right: 50%;
+    margin-top: -2rem;
+    font-size: 2rem;
+    color: var(--yellow);
+}
