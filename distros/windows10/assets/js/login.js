@@ -86,7 +86,7 @@ let loginButton = document.getElementById('btnLogin'),
         function showLoginMessage() {
             coverAreaButton.style.display = 'none'
             logginInMessage.style.display = 'flex'
-            userImage.src = `./assets/img/users/${usernameText.innerText}.png`
+            userImage.src = `https://github.com/${usernameText.innerText}.png`
             logginInMessage.style.animation = 'fade .75s ease-in-out';
             userImage.style.animation = 'fade .75s ease-in-out';
         }
