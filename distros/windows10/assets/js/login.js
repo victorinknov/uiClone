@@ -94,18 +94,20 @@ function logUserIntoAccount() {
     let username = usernameText.innerText
 
     if (username == 'Guest' || '') {
-        window.alert(`You can't login as guest or without username. Your login is your username of your Github's account. Replace 'Guest' with your.`)
+        let message = `You can't login as guest or without username. Your login is your username of your Github's account. Replace 'Guest' with your.`
+        errorMessage ('open', message)
     }
     if (username == 'liveDistros') {
         showLoginMessage(username)
     }
-    else if (username != 'liveDistros') {
+    else if (username != 'liveDistros' && username != 'Guest') {
         checkIfImageExists(`https://github.com/${usernameText.innerText}.png`, (exists) => {
             if (exists) {
                 showLoginMessage(username)
             }
             else {
-                window.alert('You must need have a Github account with a valid username to login.')
+            let message = 'You must need have a Github account with a valid username to login.'
+            errorMessage ('open', message)
             }
         })
     }
@@ -138,3 +140,19 @@ function checkIfImageExists(url, callback) {
     }
 }
 
+let closeErrorModal = document.getElementById('closeErrorModal'),
+closeErrorModalBtn = document.getElementById('closeErrorModalBtn'),
+    closesModal = [closeErrorModal, closeErrorModalBtn]
+
+closesModal.forEach(element => {
+    element.addEventListener('click', ()=>{
+        errorMessage('close')
+    })
+})
+
+function errorMessage (event, message) {
+    let textError = document.getElementById('textError')
+    textError.innerText = message
+    let modalErrorUserNotFound = document.getElementById('modalErrorUserNotFound')
+    event == 'open' ? modalErrorUserNotFound.style.display = 'flex' : event == 'close' ? modalErrorUserNotFound.style.display = 'none' : null
+}

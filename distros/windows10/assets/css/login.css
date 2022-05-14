@@ -206,3 +206,88 @@ section.loginDetails {
     width: 15px;
     height: 15px;
 }
+
+.modalErrorUserNotFound {
+    position: absolute;
+    display: none;
+    width: 400px;
+    height: 220px;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    top: calc(75% - (220px / 2));
+    left: calc(75% - (400px / 2));
+    border: 1.5px solid #8f8f8f;
+    font-family: 'SegoeUI';
+
+}
+
+.modalErrorUserNotFound main {
+    width:100%;
+    height: 100%; 
+}
+
+main .errorDivTitle {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.errorTitle {
+    font-size: .9rem;
+    font-family: 'SegoeUI';
+
+}
+
+.errorContent {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 60%;
+    padding: 0 20px;
+}
+
+.errorImage {
+    height: 30px !important;
+    width: 30px !important
+}
+
+.textError {
+    margin-left: 15px;
+    text-align: left;
+    max-width: calc(100% - (30px + 20px + 15px));
+    font-size: .8rem;
+}
+
+.subErrorDivision {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 20px;
+    width: 100%;
+    height: 25%;
+    background: #f0f0f0;
+}
+
+.closeErrorModalBtn {
+    width: 80px;
+    height: 25px;
+    border-radius: none;
+    outline: none;
+    border: 2px solid #296ea8;
+}
+
+button:hover, .closeErrorModal:hover {
+    cursor: pointer;
+}
+
+.closeErrorModal {
+    width: .9rem;
+    height: .9rem;
+    filter: brightness(-100)
+}

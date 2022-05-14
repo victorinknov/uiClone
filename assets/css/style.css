@@ -428,8 +428,7 @@ form h3 span.draw {
         vertical-align: middle;
         padding-left: 42px;
         padding-right: 42px;
-        font-size: 14px;
-        font-weight: bold;
+        font: 14px bold;
         /* Use the Roboto font that is loaded in the <head> */
         font-family: 'Roboto', sans-serif;
       }
