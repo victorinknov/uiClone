@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script defer>
+        function checkIfImageExists(url, callback) {
+  const img = new Image();
+  img.src = url;
+  
+  if (img.complete) {
+    callback(true);
+  } else {
+    img.onload = () => {
+      callback(true);
+    };
+    
+    img.onerror = () => {
+      callback(false);
+    };
+  }
+}
+
+
+// USAGE
+checkIfImageExists('http://website/images/img.png', (exists) => {
+  if (exists) {
+    console.log('Image exists. ')
+  } else {
+    console.error('Image does not exists.')
+  }
+});
+    </script>
+    <img src="" width="200" height="200" style="border: 1px solid red; margin: 0; border-radius: 50%;" alt=""
+        id="myImgElem">
+</body>
+
+</html>

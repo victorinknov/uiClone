@@ -1,3 +1,7 @@
+* {
+    user-select: none !important;
+}
+
 #loginPage {
     display: none;
     width: 100%;
@@ -131,6 +135,8 @@ section.loginDetails {
     font-size: 2.5rem;
     margin-top: .5rem;
     font-weight: 300;
+    user-select: none !important;
+    outline: none;
 }
 
 .coverBtn {

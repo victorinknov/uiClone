@@ -78,16 +78,65 @@ let loginButton = document.getElementById('btnLogin'),
     logginInMessage = document.getElementById('logginInMessage'),
     usernameText = document.querySelector('.usernameText'),
     userImage = document.getElementById('userImage')
-    
-    
 
-    loginButton.addEventListener('click', () => {
-        usernameText.innerText == 'Guest' || '' ? window.alert('Você não pode entrar como convidado. Insira seu login editando o nome de usuário.') : showLoginMessage()
-        function showLoginMessage() {
-            coverAreaButton.style.display = 'none'
-            logginInMessage.style.display = 'flex'
-            userImage.src = `https://github.com/${usernameText.innerText}.png`
-            logginInMessage.style.animation = 'fade .75s ease-in-out';
-            userImage.style.animation = 'fade .75s ease-in-out';
-        }
-    })
+document.querySelector('.usernameText').addEventListener('keydown', (evt) => {
+    if (evt.keyCode === 13) {
+        evt.preventDefault()
+        logUserIntoAccount()
+    }
+});
+
+loginButton.addEventListener('click', () => {
+    logUserIntoAccount ()
+})
+
+function logUserIntoAccount () {
+    if (usernameText.innerText == 'Guest' || '') {
+        window.alert(`You can't login as guest. Your login is your username of your Github's account. Replace 'Guest' with your.`)
+    }
+    else if (usernameText.innerText) {
+        checkIfImageExists(`https://github.com/${usernameText.innerText}.png`, (exists) => {
+            if (exists) {
+                showLoginMessage()
+            } else {
+                window.alert('You must need have a Github account with a valid username to login.')
+            }
+        })
+    }
+    function showLoginMessage() {
+        coverAreaButton.style.display = 'none'
+        logginInMessage.style.display = 'flex'
+        userImage.src = `https://github.com/${usernameText.innerText}.png`
+        logginInMessage.style.animation = 'fade .75s ease-in-out'
+        userImage.style.animation = 'fade .75s ease-in-out'
+        usernameText.removeAttribute('contenteditable')
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// CHECK IF IMAGE EXISTS
+function checkIfImageExists(url, callback) {
+    const img = new Image();
+    img.src = url;
+
+    if (img.complete) {
+        callback(true);
+    } else {
+        img.onload = () => {
+            callback(true);
+        };
+
+        img.onerror = () => {
+            callback(false);
+        };
+    }
+}
+
