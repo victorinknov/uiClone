@@ -87,56 +87,54 @@ document.querySelector('.usernameText').addEventListener('keydown', (evt) => {
 });
 
 loginButton.addEventListener('click', () => {
-    logUserIntoAccount ()
+    logUserIntoAccount()
 })
 
-function logUserIntoAccount () {
-    if (usernameText.innerText == 'Guest' || '') {
-        window.alert(`You can't login as guest. Your login is your username of your Github's account. Replace 'Guest' with your.`)
+function logUserIntoAccount() {
+    let username = usernameText.innerText
+
+    if (username == 'Guest' || '') {
+        window.alert(`You can't login as guest or without username. Your login is your username of your Github's account. Replace 'Guest' with your.`)
     }
-    else if (usernameText.innerText) {
+    if (username == 'liveDistros') {
+        showLoginMessage(username)
+    }
+    else if (username != 'liveDistros') {
         checkIfImageExists(`https://github.com/${usernameText.innerText}.png`, (exists) => {
             if (exists) {
-                showLoginMessage()
-            } else {
+                showLoginMessage(username)
+            }
+            else {
                 window.alert('You must need have a Github account with a valid username to login.')
             }
         })
     }
-    function showLoginMessage() {
+
+    function showLoginMessage(username) {
+        usernameText.removeAttribute('contenteditable')
         coverAreaButton.style.display = 'none'
         logginInMessage.style.display = 'flex'
-        userImage.src = `https://github.com/${usernameText.innerText}.png`
+        username == 'liveDistros' ? userImage.src = '/distros/windows10/assets/img/users/liveDistros.png' : userImage.src = `https://github.com/${username}.png`
         logginInMessage.style.animation = 'fade .75s ease-in-out'
         userImage.style.animation = 'fade .75s ease-in-out'
-        usernameText.removeAttribute('contenteditable')
     }
 }
 
-
-
-
-
-
-
-
-
-
-// CHECK IF IMAGE EXISTS
+// Check if image exists
 function checkIfImageExists(url, callback) {
-    const img = new Image();
-    img.src = url;
+    const img = new Image()
+    img.src = url
 
     if (img.complete) {
-        callback(true);
+        callback(true)
     } else {
         img.onload = () => {
-            callback(true);
-        };
+            callback(true)
+        }
 
         img.onerror = () => {
-            callback(false);
-        };
+            callback(false)
+        }
     }
 }
 
