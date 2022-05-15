@@ -219,7 +219,7 @@ section.loginDetails {
     left: calc(75% - (400px / 2));
     border: 1.5px solid #8f8f8f;
     font-family: 'SegoeUI';
-
+    cursor: default !important;
 }
 
 .modalErrorUserNotFound main {
