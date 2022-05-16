@@ -322,7 +322,7 @@ section {
 
 @media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: portrait) {
     .modalContent, .container, main, section, nav {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 }
 
