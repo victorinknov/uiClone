@@ -11,4 +11,4 @@ All visual content, with the exception of background images, was created by me a
 [Live Distros](https://www.livedistros.com)
 
 ## Check it out
-[Live-Distros-Google-Chrome-2022-07-15-22-09-05_1.webm](https://user-images.githubusercontent.com/56061950/179329236-88246bcb-6e9c-4c8c-bd86-2827a10c33a3.webm)
+[](https://user-images.githubusercontent.com/56061950/179329236-88246bcb-6e9c-4c8c-bd86-2827a10c33a3.webm)
