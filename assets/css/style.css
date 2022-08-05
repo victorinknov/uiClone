@@ -75,6 +75,7 @@ ul li {
     margin: 0 2rem;
     cursor: pointer;
     transition: all .2s ease-in-out;
+    text-align: center;
 }
 
 ul li:first-of-type {
@@ -177,7 +178,9 @@ ul li#kofi:hover {
     border: 1px solid rgba(255,255,255, .3);
     background: linear-gradient(to top, rgba(50, 100, 240, .1), rgba(255,255,255, .07));
     height: 250px;
-    width: 250px;
+    aspect-ratio: 1;
+    margin:0;
+
     border-radius: .639rem;
 }
 
@@ -323,6 +326,28 @@ section {
 @media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: portrait) {
     .modalContent, .container, main, section, nav {
         flex-wrap: wrap;
+    }
+    nav {
+        align-items: center;
+        justify-content: center;
+    }
+    nav span {
+        margin: 1rem 0 !important;
+    }
+    
+    .container {
+        margin: 2rem 0 !important;
+    }
+
+    .modalCard {
+        max-height: 225px;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        max-height: 89.2vh;
     }
 }
 
