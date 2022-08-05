@@ -340,14 +340,14 @@ section {
     }
 
     .modalCard {
-        max-height: 225px;
+        max-height: 200px;
     }
     .container {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         flex-direction: column;
-        max-height: 89.2vh;
+        max-height: 82vh;
     }
 }
 
