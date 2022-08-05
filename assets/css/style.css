@@ -324,9 +324,6 @@ section {
 }
 
 @media (orientation: portrait) {
-    * {
-        border: 1px solid blue;
-    }
     nav {
         justify-content: space-around !important;
     }
