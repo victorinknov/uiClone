@@ -324,6 +324,9 @@ section {
 }
 
 @media (orientation: portrait) {
+    nav {
+        justify-content: space-around !important;
+    }
     .modalContent, .container, main, section, nav {
         flex-wrap: wrap;
     }
