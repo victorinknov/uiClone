@@ -1,4 +1,10 @@
 // after 3 seconds you will able to see windows login page
+
+// search string
+let queryString = window.location.search
+let queryParams = new URLSearchParams(queryString)
+let preloaderTime = Number(queryParams.get('time'))*1000
+
 setTimeout(()=>{
     let transition = document.getElementById('loginPage')
     document.getElementById("loadingPage").style.display = "none"
@@ -7,4 +13,4 @@ setTimeout(()=>{
     // transition.addEventListener('click', ()=>{
     //     transition.classList.add('blur')
     // })
-}, 1000) 
+}, preloaderTime ?? 5000) 
